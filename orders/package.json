@@ -1,0 +1,45 @@
+{
+  "name": "orders",
+  "version": "0.1.0",
+  "bin": {
+    "orders": "bin/orders.js"
+  },
+  "scripts": {
+    "cdk": "cdk",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "pretest:int": "docker-compose up -d dynamodb-local",
+    "pretest:int:watch": "docker-compose up -d dynamodb-local",
+    "posttest:int": "docker-compose stop dynamodb-local",
+    "posttest:int:watch": "docker-compose stop dynamodb-local",
+    "test": "jest --config jest.unit.config.js",
+    "test:watch": "LOCAL=true jest --watch --config jest.unit.config.js",
+    "test:int": "LOCAL=true jest --config jest.int.config.js",
+    "test:int:watch": "LOCAL=true jest --watch --config jest.int.config.js",
+    "test:coverage": "LOCAL=true jest --config jest.unit.config.js --coverage",
+    "deploy": "cdk deploy --outputs-file ./cdk-outputs.json",
+    "remove": "cdk destroy"
+  },
+  "devDependencies": {
+    "@aws-cdk/aws-apigateway": "^1.147.0",
+    "@aws-cdk/aws-dynamodb": "^1.147.0",
+    "@aws-cdk/aws-lambda": "^1.147.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.147.0",
+    "@types/aws-lambda": "^8.10.92",
+    "@types/jest": "^26.0.24",
+    "@types/node": "10.17.27",
+    "aws-cdk": "^2.14.0",
+    "jest": "^26.4.2",
+    "prettier": "^2.5.1",
+    "ts-jest": "^26.2.0",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.14.0",
+    "aws-sdk": "^2.1082.0",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.16",
+    "winston": "^3.6.0"
+  }
+}
