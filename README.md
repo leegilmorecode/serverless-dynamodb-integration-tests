@@ -6,7 +6,7 @@ Example Serverless DynamoDB integration tests using Jest, TypeScript and the AWS
 
 How to integration test DynamoDB service layers in your Serverless solutions using Jest, with visuals and code examples written in the AWS CDK and TypeScript.
 
-You can view the article here: [Serverless DynamoDB Integration Tests with Jest 🚀](/)
+You can view the article here: [Serverless DynamoDB Integration Tests with Jest 🚀](https://leejamesgilmore.medium.com/serverless-dynamodb-integration-tests-with-jest-cbb276aec84d)
 
 ![image](./docs/images/header.png)
 
